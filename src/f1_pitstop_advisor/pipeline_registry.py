@@ -1,16 +1,14 @@
-"""Project pipelines."""
-from __future__ import annotations
-
-from kedro.framework.project import find_pipelines
+from typing import Dict
 from kedro.pipeline import Pipeline
+from f1_pitstop_advisor.pipelines import data_ingestion, feature_engineering
 
 
-def register_pipelines() -> dict[str, Pipeline]:
-    """Register the project's pipelines.
+def register_pipelines() -> Dict[str, Pipeline]:
+    data_ingestion_pipeline = data_ingestion.create_pipeline()
+    feature_engineering_pipeline = feature_engineering.create_pipeline()
 
-    Returns:
-        A mapping from pipeline names to ``Pipeline`` objects.
-    """
-    pipelines = find_pipelines()
-    pipelines["__default__"] = sum(pipelines.values())
-    return pipelines
+    return {
+        "__default__": data_ingestion_pipeline + feature_engineering_pipeline,
+        "data_ingestion": data_ingestion_pipeline,
+        "feature_engineering": feature_engineering_pipeline,
+    }

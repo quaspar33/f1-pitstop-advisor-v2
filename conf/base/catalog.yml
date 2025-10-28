@@ -1,7 +1,15 @@
 raw_sessions:
-  type: MemoryDataset
+  type: pickle.PickleDataset
+  filepath: data/01_raw/raw_sessions.pickle
 
 loaded_sessions:
   type: pickle.PickleDataset
-  filepath: data/01_raw/f1_sessions.pickle
-  versioned: true
+  filepath: data/02_interim/loaded_sessions.pickle
+
+circuit_lap_data:
+  type: pickle.PickleDataset
+  filepath: data/03_primary/circuit_lap_data.pickle
+
+initial_models:
+  type: pickle.PickleDataset
+  filepath: data/04_experiments/initial_models.pickle
