@@ -1,0 +1,25 @@
+name: f1-pitstop-advisor
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - jupyterlab>=4.0
+  - ipykernel
+  - numpy>=1.24
+  - pandas>=2.0
+  - scikit-learn>=1.3
+  - matplotlib>=3.7
+  - pip
+  - pip:
+      - pre-commit
+      - ruff
+      - black
+      - pytest>=7.0
+      - wandb>=0.15
+      - kedro~=1.0.0
+      - kedro-datasets[pandas]>=3.0
+      - pyarrow>=14.0
+      - pandera>=0.17
+      - nbstripout
+      - fastf1>=3.3

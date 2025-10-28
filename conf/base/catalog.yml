@@ -1,0 +1,7 @@
+raw_sessions:
+  type: MemoryDataset
+
+loaded_sessions:
+  type: pickle.PickleDataset
+  filepath: data/01_raw/f1_sessions.pickle
+  versioned: true
