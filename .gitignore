@@ -21,7 +21,6 @@ data/*
 !data/02_interim/
 !data/03_primary/
 !data/04_experiments/
-data/**/.gitkeep
 data/**/*.pickle
 
 # Mac
