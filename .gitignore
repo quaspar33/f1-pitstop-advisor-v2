@@ -16,11 +16,13 @@ dist/
 *.env
 
 # Data
-data/**/*
+data/*
 !data/01_raw/
 !data/02_interim/
 !data/03_primary/
 !data/04_experiments/
+data/**/.gitkeep
+data/**/*.pickle
 
 # Mac
 .DS_Store
