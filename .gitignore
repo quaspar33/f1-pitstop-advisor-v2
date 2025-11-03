@@ -17,6 +17,7 @@ dist/
 
 # Data
 data/*
+!data/parameters/
 !data/01_raw/
 !data/02_interim/
 !data/03_primary/

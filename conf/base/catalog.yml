@@ -1,3 +1,7 @@
+translation_map:
+  type: pandas.CSVDataSet
+  filepath: data/parameters/translation_map.csv
+
 raw_sessions:
   type: pickle.PickleDataset
   filepath: data/01_raw/raw_sessions.pickle
@@ -13,11 +17,3 @@ circuit_lap_data:
 initial_models:
   type: pickle.PickleDataset
   filepath: data/04_experiments/initial_models.pickle
-
-ex1:
-  type: pickle.PickleDataset
-  filepath: data/05_ex1/out.pickle
-
-ex2:
-  type: pickle.PickleDataset
-  filepath: data/06_ex2/out.pickle
