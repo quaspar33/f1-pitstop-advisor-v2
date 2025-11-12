@@ -25,3 +25,39 @@ second_phase_models:
 best_parameters:
   type: pickle.PickleDataset
   filepath: data/05_final_regressors/final_regressor_dictionary.pickle
+
+optimization_results:
+  type: pickle.PickleDataset
+  filepath: data/06_model_output/optimization_results.pickle
+
+best_strategies:
+  type: pickle.PickleDataset
+  filepath: data/06_model_output/best_strategies.pickle
+
+detailed_simulations:
+  type: pickle.PickleDataset
+  filepath: data/06_model_output/detailed_simulations.pickle
+
+optimization_results_csv:
+  type: pandas.CSVDataset
+  filepath: data/07_reporting/optimization_results.csv
+  save_args:
+    index: false
+
+best_strategies_csv:
+  type: pandas.CSVDataset
+  filepath: data/07_reporting/best_strategies.csv
+  save_args:
+    index: false
+
+detailed_simulations_csv:
+  type: pandas.CSVDataset
+  filepath: data/07_reporting/detailed_simulations.csv
+  save_args:
+    index: false
+
+strategy_plots:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/07_reporting/strategy_plots
+  save_args:
+    format: png

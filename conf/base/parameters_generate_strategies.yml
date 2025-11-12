@@ -1,0 +1,17 @@
+strategy_optimization:
+  min_stops: 1
+  max_stops: 2
+  top_n: 10
+
+  # 'numeric' dla C1-C5 (1-5) lub 'categorical' dla SOFT/MEDIUM/HARD
+  compound_mode: 'numeric'
+
+  test_all_compounds: false
+
+  air_temp: null
+  track_temp: null
+  humidity: null
+  rainfall: false
+  pressure: null
+  wind_speed: null
+  wind_direction: null

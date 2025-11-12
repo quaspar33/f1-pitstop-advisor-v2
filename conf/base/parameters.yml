@@ -1,0 +1,70 @@
+strategy_optimization:
+  race_laps:
+    Catalunya: 66
+    Spa-Francorchamps: 44
+    Silverstone: 52
+    Singapore: 62
+    Hungaroring: 70
+    Suzuka: 53
+    Paul Ricard: 53
+    Austin: 56
+    Miami: 57
+    Zandvoort: 72
+    Monte Carlo: 78
+    Montreal: 70
+    Monza: 53
+    Melbourne: 58
+    Spielberg: 71
+    Sakhir: 57
+    Imola: 63
+    Baku: 51
+    Mexico City: 71
+    Jeddah: 50
+    Las Vegas: 50
+    Yas Marina: 58
+
+  mean_pit_stop:
+    Austin: 22.17
+    Baku: 23.08
+    Catalunya: 24.77
+    Hungaroring: 22.92
+    Imola: 23.74
+    Jeddah: 22.4
+    Las Vegas: 20.7
+    Melbourne: 20.76
+    Mexico City: 23.72
+    Monte Carlo: 23.4
+    Montreal: 30.65
+    Monza: 21.82
+    Paul Ricard: 25.92
+    Sakhir: 25.99
+    Silverstone: 27.99
+    Singapore: 21.37
+    Spa-Francorchamps: 23.73
+    Spielberg: 25.5
+    Suzuka: 25.69
+    Yas Marina: 29.64
+    Zandvoort: 26.78
+
+  pit_stop_std:
+    Austin: 2.87
+    Baku: 0.4
+    Catalunya: 1.53
+    Hungaroring: 1.43
+    Imola: 3.32
+    Jeddah: 4.06
+    Las Vegas: 0.6
+    Melbourne: 5.03
+    Mexico City: 4.56
+    Monte Carlo: 2.47
+    Montreal: 1.73
+    Monza: 0.52
+    Paul Ricard: 3.77
+    Sakhir: 3.1
+    Silverstone: 4.62
+    Singapore: 0.54
+    Spa-Francorchamps: 2.8
+    Spielberg: 3.52
+    Suzuka: 3.85
+    Yas Marina: 0.69
+    Zandvoort: 3.86
