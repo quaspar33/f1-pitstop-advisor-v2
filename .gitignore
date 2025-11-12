@@ -22,6 +22,7 @@ data/*
 !data/02_interim/
 !data/03_primary/
 !data/04_experiments/
+!05_final_regressors/
 data/**/*.pickle
 
 # Mac

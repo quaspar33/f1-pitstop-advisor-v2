@@ -7,7 +7,7 @@ def create_pipeline(**kwargs) -> Pipeline:
         [
             node(
                 func=aggregate_laps_by_circuit,
-                inputs="loaded_sessions",
+                inputs=["loaded_sessions", "compounds_map"],
                 outputs="circuit_lap_data",
                 name="aggregate_laps_by_circuit_node",
             ),
