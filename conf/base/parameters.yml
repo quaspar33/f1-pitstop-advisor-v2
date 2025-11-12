@@ -21,7 +21,7 @@ strategy_optimization:
     Mexico City: 71
     Jeddah: 50
     Las Vegas: 50
-    Yas Marina: 58
+    Yas Marina Circuit: 58
 
   mean_pit_stop:
     Austin: 22.17
@@ -45,6 +45,8 @@ strategy_optimization:
     Suzuka: 25.69
     Yas Marina: 29.64
     Zandvoort: 26.78
+    Miami: 22.48
+    Yas Marina Circuit: 24.52
 
   pit_stop_std:
     Austin: 2.87
@@ -68,3 +70,5 @@ strategy_optimization:
     Suzuka: 3.85
     Yas Marina: 0.69
     Zandvoort: 3.86
+    Miami: 2.59
+    Yas Marina Circuit: 4.75

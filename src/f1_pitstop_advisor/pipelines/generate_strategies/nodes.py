@@ -474,7 +474,7 @@ def visualize_strategies(
         ax.grid(True, alpha=0.3)
         fig.tight_layout()
 
-        figures[circuit] = fig
+        figures[f"{circuit}.png"] = fig
         logger.info(f"📊 Wykres utworzony dla: {circuit}")
 
     return figures
