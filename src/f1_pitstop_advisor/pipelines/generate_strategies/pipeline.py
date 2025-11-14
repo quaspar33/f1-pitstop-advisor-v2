@@ -31,13 +31,13 @@ def create_pipeline(**kwargs):
             ),
             node(
                 func=save_optimization_results_csv,
-                inputs=["optimization_results"],
+                inputs=["optimization_results", "params:strategy_optimization"],
                 outputs="optimization_results_csv",
                 name="save_optimization_results_csv_node",
             ),
             node(
                 func=save_best_strategies_csv,
-                inputs=["best_strategies"],
+                inputs=["best_strategies", "params:strategy_optimization"],
                 outputs="best_strategies_csv",
                 name="save_best_strategies_csv_node",
             ),
@@ -60,7 +60,7 @@ def create_pipeline(**kwargs):
             ),
             node(
                 func=visualize_strategies,
-                inputs=["detailed_simulations"],
+                inputs=["detailed_simulations", "params:strategy_optimization"],
                 outputs="strategy_plots",
                 name="visualize_strategies_node",
             ),

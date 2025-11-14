@@ -3,11 +3,6 @@ strategy_optimization:
   max_stops: 2
   top_n: 10
 
-  # 'numeric' dla C1-C5 (1-5) lub 'categorical' dla SOFT/MEDIUM/HARD
-  compound_mode: 'numeric'
-
-  test_all_compounds: false
-
   air_temp: null
   track_temp: null
   humidity: null
@@ -15,3 +10,165 @@ strategy_optimization:
   pressure: null
   wind_speed: null
   wind_direction: null
+
+  race_laps:
+    Catalunya: 66
+    Spa-Francorchamps: 44
+    Silverstone: 52
+    Singapore: 62
+    Hungaroring: 70
+    Suzuka: 53
+    Paul Ricard: 53
+    Austin: 56
+    Miami: 57
+    Zandvoort: 72
+    Monte Carlo: 78
+    Montreal: 70
+    Monza: 53
+    Melbourne: 58
+    Spielberg: 71
+    Sakhir: 57
+    Imola: 63
+    Baku: 51
+    Mexico City: 71
+    Jeddah: 50
+    Las Vegas: 50
+    Yas Marina Circuit: 58
+
+  mean_pit_stop:
+    Austin: 22.17
+    Baku: 23.08
+    Catalunya: 24.77
+    Hungaroring: 22.92
+    Imola: 23.74
+    Jeddah: 22.4
+    Las Vegas: 20.7
+    Melbourne: 20.76
+    Mexico City: 23.72
+    Monte Carlo: 23.4
+    Montreal: 30.65
+    Monza: 21.82
+    Paul Ricard: 25.92
+    Sakhir: 25.99
+    Silverstone: 27.99
+    Singapore: 21.37
+    Spa-Francorchamps: 23.73
+    Spielberg: 25.5
+    Suzuka: 25.69
+    Zandvoort: 26.78
+    Miami: 22.48
+    Yas Marina Circuit: 24.52
+
+  pit_stop_std:
+    Austin: 2.87
+    Baku: 0.4
+    Catalunya: 1.53
+    Hungaroring: 1.43
+    Imola: 3.32
+    Jeddah: 4.06
+    Las Vegas: 0.6
+    Melbourne: 5.03
+    Mexico City: 4.56
+    Monte Carlo: 2.47
+    Montreal: 1.73
+    Monza: 0.52
+    Paul Ricard: 3.77
+    Sakhir: 3.1
+    Silverstone: 4.62
+    Singapore: 0.54
+    Spa-Francorchamps: 2.8
+    Spielberg: 3.52
+    Suzuka: 3.85
+    Zandvoort: 3.86
+    Miami: 2.59
+    Yas Marina Circuit: 4.75
+
+  compounds:
+    Melbourne:
+      soft: 5
+      medium: 4
+      hard: 3
+    Suzuka:
+      soft: 3
+      medium: 2
+      hard: 1
+    Sakhir:
+      soft: 3
+      medium: 2
+      hard: 1
+    Jeddah:
+      soft: 5
+      medium: 4
+      hard: 3
+    Miami:
+      soft: 5
+      medium: 4
+      hard: 3
+    Imola:
+      soft: 6
+      medium: 5
+      hard: 4
+    Monte Carlo:
+      soft: 6
+      medium: 5
+      hard: 4
+    Catalunya:
+      soft: 3
+      medium: 2
+      hard: 1
+    Montreal:
+      soft: 6
+      medium: 5
+      hard: 4
+    Spielberg:
+      soft: 5
+      medium: 4
+      hard: 3
+    Silverstone:
+      soft: 4
+      medium: 3
+      hard: 2
+    Spa-Francorchamps:
+      soft: 4
+      medium: 3
+      hard: 1
+    Hungaroring:
+      soft: 5
+      medium: 4
+      hard: 3
+    Zandvoort:
+      soft: 4
+      medium: 3
+      hard: 2
+    Monza:
+      soft: 5
+      medium: 4
+      hard: 3
+    Baku:
+      soft: 6
+      medium: 5
+      hard: 4
+    Singapore:
+      soft: 5
+      medium: 4
+      hard: 3
+    Austin:
+      soft: 4
+      medium: 3
+      hard: 1
+    Mexico City:
+      soft: 5
+      medium: 4
+      hard: 2
+    Las Vegas:
+      soft: 5
+      medium: 4
+      hard: 3
+    Yas Marina Circuit:
+      soft: 5
+      medium: 4
+      hard: 3
+    Paul Ricard:
+      soft: 4
+      medium: 3
+      hard: 2
