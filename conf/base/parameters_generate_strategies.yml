@@ -34,6 +34,9 @@ strategy_optimization:
     Jeddah: 50
     Las Vegas: 50
     Yas Marina Circuit: 58
+    Shanghai:
+    Sao Paulo: 71
+    Lusail: 57
 
   mean_pit_stop:
     Austin: 22.17
@@ -58,6 +61,9 @@ strategy_optimization:
     Zandvoort: 26.78
     Miami: 22.48
     Yas Marina Circuit: 24.52
+    Shanghai: 23.35
+    Sao Paulo: 25.11
+    Lusail: 29.3
 
   pit_stop_std:
     Austin: 2.87
@@ -82,6 +88,9 @@ strategy_optimization:
     Zandvoort: 3.86
     Miami: 2.59
     Yas Marina Circuit: 4.75
+    Shanghai: 3.1
+    Sao Paulo: 4.1
+    Lusail: 5.3
 
   compounds:
     Melbourne:
