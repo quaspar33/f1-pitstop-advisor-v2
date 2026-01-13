@@ -214,10 +214,14 @@ def aggregate_laps_by_circuit(
 ) -> Dict[str, pd.DataFrame]:
     print("Reaktywuję sesje po deserializacji...")
 
+    successfully_loaded_sessions = []
+
     for i, session in enumerate(loaded_sessions, 1):
         if session is not None:
             try:
                 session.load()
+                _ = session.session_info
+                successfully_loaded_sessions.append(session)
                 print(f"  ✓ Reaktywowano sesję {i}/{len(loaded_sessions)}")
             except Exception as e:
                 print(f"  ✗ Błąd reaktywacji sesji {i}: {e}")
@@ -225,9 +229,11 @@ def aggregate_laps_by_circuit(
     print("=" * 60)
 
     circuits = set()
-    for session in loaded_sessions:
-        if session is not None:
+    for session in successfully_loaded_sessions:
+        try:
             circuits.add(session.session_info["Meeting"]["Circuit"]["ShortName"])
+        except Exception as e:
+            print(f"  ⚠️ Nie można odczytać nazwy toru: {e}")
 
     print(f"\nZnaleziono {len(circuits)} unikalnych torów")
 
@@ -236,10 +242,10 @@ def aggregate_laps_by_circuit(
         print(f"\nPrzetwarzam dane dla toru: {circuit}")
         try:
             dfs[circuit] = get_refined_lap_data_with_z_score_for_circuit(
-                loaded_sessions, circuit
+                successfully_loaded_sessions, circuit  # ← Użyj poprawnie załadowanych
             )
 
-            for s in loaded_sessions:
+            for s in successfully_loaded_sessions:  # ← Tu też
                 if s and s.session_info["Meeting"]["Circuit"]["ShortName"] == circuit:
                     dfs[circuit] = convert_compounds_and_filter_rain(
                         dfs[circuit],
