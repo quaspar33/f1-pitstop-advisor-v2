@@ -242,10 +242,10 @@ def aggregate_laps_by_circuit(
         print(f"\nPrzetwarzam dane dla toru: {circuit}")
         try:
             dfs[circuit] = get_refined_lap_data_with_z_score_for_circuit(
-                successfully_loaded_sessions, circuit  # ← Użyj poprawnie załadowanych
+                successfully_loaded_sessions, circuit
             )
 
-            for s in successfully_loaded_sessions:  # ← Tu też
+            for s in successfully_loaded_sessions:
                 if s and s.session_info["Meeting"]["Circuit"]["ShortName"] == circuit:
                     dfs[circuit] = convert_compounds_and_filter_rain(
                         dfs[circuit],
