@@ -89,7 +89,6 @@ def generate_strategies(
     possible_laps = list(range(earliest_stop, latest_stop + 1))
 
     for num_stops in range(min_stops, max_stops + 1):
-
         for strategy in combinations_with_replacement(possible_laps, num_stops):
             strategy_list = sorted(list(strategy))
             valid = True
