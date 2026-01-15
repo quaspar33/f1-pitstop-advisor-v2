@@ -1,6 +1,6 @@
 strategy_optimization:
   min_stops: 1
-  max_stops: 2
+  max_stops: 3
   top_n: 10
 
   air_temp: null
