@@ -91,32 +91,32 @@ def convert_compounds_and_filter_rain(
     event_name = session.event["EventName"]
     year = session.event["EventDate"].year
 
-    print(f"  🔹 Przetwarzanie sesji {event_name} {year}")
+    print(f"Przetwarzanie sesji {event_name} {year}")
 
     if "Rainfall" in session_data.columns:
         rain_filtered = session_data[~session_data["Rainfall"]].copy()
         if len(rain_filtered) != len(session_data):
             print(
-                f"    ⚠️ Usunięto {len(session_data) - len(rain_filtered)} wierszy z powodu deszczu"
+                f"Usunięto {len(session_data) - len(rain_filtered)} wierszy z powodu deszczu"
             )
         session_data = rain_filtered
         if len(session_data) == 0:
-            print("    ⚠️ Usunięto sesję - padało przez cały wyścig")
+            print("Usunięto sesję - padało przez cały wyścig")
             return None
 
     if "Compound" not in session_data.columns:
-        print(f"    ⚠️ Brak kolumny 'Compound' w sesji {event_name} {year}")
+        print(f"Brak kolumny 'Compound' w sesji {event_name} {year}")
         return session_data
 
     rain_compounds = ["INTERMEDIATE", "WET"]
     non_rain_data = session_data[~session_data["Compound"].isin(rain_compounds)].copy()
     if len(non_rain_data) != len(session_data):
         print(
-            f"    ⚠️ Usunięto {len(session_data) - len(non_rain_data)} wierszy opon deszczowych"
+            f"Usunięto {len(session_data) - len(non_rain_data)} wierszy opon deszczowych"
         )
     session_data = non_rain_data
     if len(session_data) == 0:
-        print("    ⚠️ Usunięto sesję - tylko opony deszczowe")
+        print("Usunięto sesję - tylko opony deszczowe")
         return None
 
     mapping_row = translation_map[
@@ -124,12 +124,10 @@ def convert_compounds_and_filter_rain(
     ]
     if mapping_row.empty:
         if remove_if_no_mapping:
-            print(f"    ⚠️ Brak mapowania dla: {event_name} {year} - usuwam sesję")
+            print(f"Brak mapowania dla: {event_name} {year} - usuwam sesję")
             return None
         else:
-            print(
-                f"    ⚠️ Brak mapowania dla: {event_name} {year} - pozostawiam bez zmiany"
-            )
+            print(f"Brak mapowania dla: {event_name} {year} - pozostawiam bez zmiany")
             return session_data
 
     mapping_dict = {
@@ -141,11 +139,11 @@ def convert_compounds_and_filter_rain(
     session_data["RealCompound"] = session_data["Compound"].map(mapping_dict)
     unmapped = session_data["RealCompound"].isna().sum()
     if unmapped > 0:
-        print(f"    ⚠️ {unmapped} wierszy nie udało się zmapować na RealCompound")
+        print(f"{unmapped} wierszy nie udało się zmapować na RealCompound")
 
     session_data = session_data.dropna(subset=["RealCompound"]).copy()
     if len(session_data) == 0:
-        print("    ⚠️ Usunięto sesję - brak zmapowanych compound")
+        print("Usunięto sesję - brak zmapowanych compound")
         return None
 
     session_data["CompoundNumeric"] = (
@@ -154,7 +152,7 @@ def convert_compounds_and_filter_rain(
     session_data["Compound"] = session_data["RealCompound"]
     session_data.drop(["RealCompound"], axis=1, inplace=True)
 
-    print(f"    ✅ Sesja przetworzona: {len(session_data)} wierszy pozostało")
+    print(f"Sesja przetworzona: {len(session_data)} wierszy pozostało")
     return session_data
 
 
@@ -222,9 +220,9 @@ def aggregate_laps_by_circuit(
                 session.load()
                 _ = session.session_info
                 successfully_loaded_sessions.append(session)
-                print(f"  ✓ Reaktywowano sesję {i}/{len(loaded_sessions)}")
+                print(f"Reaktywowano sesję {i}/{len(loaded_sessions)}")
             except Exception as e:
-                print(f"  ✗ Błąd reaktywacji sesji {i}: {e}")
+                print(f"Błąd reaktywacji sesji {i}: {e}")
 
     print("=" * 60)
 
@@ -233,7 +231,7 @@ def aggregate_laps_by_circuit(
         try:
             circuits.add(session.session_info["Meeting"]["Circuit"]["ShortName"])
         except Exception as e:
-            print(f"  ⚠️ Nie można odczytać nazwy toru: {e}")
+            print(f"Nie można odczytać nazwy toru: {e}")
 
     print(f"\nZnaleziono {len(circuits)} unikalnych torów")
 
@@ -257,10 +255,10 @@ def aggregate_laps_by_circuit(
 
             if dfs[circuit] is not None:
                 print(
-                    f"  ✓ {circuit}: {dfs[circuit].shape[0]} okrążeń, {dfs[circuit].shape[1]} cech"
+                    f"{circuit}: {dfs[circuit].shape[0]} okrążeń, {dfs[circuit].shape[1]} cech"
                 )
         except Exception as e:
-            print(f"  ✗ Błąd dla {circuit}: {e}")
+            print(f"Błąd dla {circuit}: {e}")
 
     print(f"Przetworzono {len(dfs)} torów")
     return dfs

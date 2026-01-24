@@ -36,12 +36,12 @@ def get_sessions(cutoff_date: str, start_year: int = 2022) -> List:
 
                 try:
                     print(
-                        f"  Pobieram dane dla wyścigu: {race_name} {year} (Runda {race_round})"
+                        f"Pobieram dane dla wyścigu: {race_name} {year} (Runda {race_round})"
                     )
                     session = f1.get_session(year, race_round, "R")
                     sessions.append(session)
                 except Exception as e:
-                    print(f"    Błąd podczas pobierania danych dla {race_name}: {e}")
+                    print(f"Błąd podczas pobierania danych dla {race_name}: {e}")
         except Exception as e:
             print(f"Błąd podczas pobierania kalendarza dla roku {year}: {e}")
 

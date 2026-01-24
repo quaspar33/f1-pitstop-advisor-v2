@@ -243,7 +243,6 @@ def save_optimization_results_csv(
         axis=1,
     )
 
-    # Usuwamy kolumny obiektowe przed zapisem do CSV
     cols_to_drop = ["Simulation", "Compounds"]
     return df.drop(columns=[c for c in cols_to_drop if c in df.columns])
 
