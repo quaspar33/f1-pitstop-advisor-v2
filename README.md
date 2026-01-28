@@ -15,7 +15,7 @@ but instead **derives structured datasets** for research and educational purpose
 
 ## Academic Context
 
-This project is part of a Bachelor's Thesis titled:
+This project is part of a Engineering Thesis titled:
 **"Application of Machine Learning Models in Modeling Optimal Pit-Stop Strategies in Formula 1"** conducted at **Polish-Japanese Academy of Information Technology** (2025/2026).
 
 ---
@@ -53,7 +53,7 @@ git clone https://github.com/quaspar33/f1-pitstop-advisor-v2.git
 cd f1-pitstop-advisor-v2
 ```
 
-### 2.Create environment
+### 2. Create environment
 ```bash
 conda env create -f environment.yml
 conda activate f1-pitstop-advisor
