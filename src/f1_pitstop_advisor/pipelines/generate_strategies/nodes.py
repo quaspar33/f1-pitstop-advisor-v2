@@ -166,7 +166,7 @@ def optimize_all_circuits(
     for circuit, model in models_dict.items():
         laps = race_laps_map.get(circuit, 56)
         strategies = generate_strategies(
-            laps, params.get("min_stops", 1), params.get("max_stops", 3), step=2
+            laps, params.get("min_stops", 1), params.get("max_stops", 3), step=1
         )
 
         total_combinations = 0

@@ -13,6 +13,13 @@ but instead **derives structured datasets** for research and educational purpose
 
 ---
 
+## Academic Context
+
+This project is part of a Bachelor's Thesis titled:
+**"Application of Machine Learning Models in Modeling Optimal Pit-Stop Strategies in Formula 1"** conducted at **Polish-Japanese Academy of Information Technology** (2025/2026).
+
+---
+
 ## Dataset
 
 **Source:** Self-generated using the [Fast-F1](https://github.com/theOehrly/Fast-F1) library (MIT License).
