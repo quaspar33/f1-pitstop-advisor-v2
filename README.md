@@ -59,8 +59,8 @@ conda env create -f environment.yml
 conda activate f1-pitstop-advisor
 ```
 
-### 3. Generate models (optional)
-The project uses pre-trained models stored as .pickle files. If you want to re-train the models or explore the selection process:
+### 3. Generate models (Optional / Mandatory for offline use)
+The project uses pre-trained models stored as .pickle files. These files are included in the online repository via Git LFS. If you are using the offline version (e.g., from a CD/USB without LFS support) or if the models are missing, you must regenerate them manually:
 1. Navigate to the notebooks/ directory.
 2. Run search_for_best_models.ipynb to evaluate different models architectures.
 3. Run search_for_best_parameters.ipynb to perform hyperparameter tuning.
