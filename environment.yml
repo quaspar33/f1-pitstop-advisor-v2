@@ -21,7 +21,7 @@ dependencies:
       - pytest>=7.0
       - wandb>=0.15
       - kedro~=1.0.0
-      - kedro-datasets[pandas]>=3.0
+      - kedro-datasets[pandas, matplotlib]>=3.0
       - pyarrow>=14.0
       - pandera>=0.17
       - nbstripout
