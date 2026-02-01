@@ -59,7 +59,14 @@ conda env create -f environment.yml
 conda activate f1-pitstop-advisor
 ```
 
-### 3. Run kedro
+### 3. Generate models (optional)
+The project uses pre-trained models stored as .pickle files. If you want to re-train the models or explore the selection process:
+1. Navigate to the notebooks/ directory.
+2. Run search_for_best_models.ipynb to evaluate different models architectures.
+3. Run search_for_best_parameters.ipynb to perform hyperparameter tuning.
+4. Ensure the resulting model files are placed in the expected directory (data/04_experiments/ and data/05_final_regressors/).
+
+### 4. Run kedro
 ```bash
 kedro run
 ```

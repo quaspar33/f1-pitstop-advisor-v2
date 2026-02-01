@@ -25,7 +25,11 @@ data/*
 !05_final_regressors/
 !06_model_output/
 !07_reporting/
+
+# Pickle
 data/**/*.pickle
+!data/04_experiments/*.pickle
+!data/05_final_regressors/*.pickle
 
 # Mac
 .DS_Store

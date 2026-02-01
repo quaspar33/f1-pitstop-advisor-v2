@@ -1,1 +1,2 @@
 pynb filter=nbstripout
+data/**/*.pickle filter=lfs diff=lfs merge=lfs -text
