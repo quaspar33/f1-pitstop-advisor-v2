@@ -57,7 +57,7 @@ detailed_simulations_csv:
     index: false
 
 strategy_plots:
-  type: matplotlib.MatplotlibWriter
-  filepath: data/07_reporting/strategy_plots
+  type: kedro_datasets.matplotlib.MatplotlibDataset
+  filepath: data/07_reporting/strategy_plots/strategy_analysis.png
   save_args:
     format: png
